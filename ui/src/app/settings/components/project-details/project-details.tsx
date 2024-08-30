@@ -661,7 +661,7 @@ export class ProjectDetails extends React.Component<RouteComponentProps<{name: s
                 />
                 <AuthSettingsCtx.Consumer>
                     {authCtx =>
-                        authCtx.appsInAnyNamespaceEnabled && (
+                        authCtx?.appsInAnyNamespaceEnabled && (
                             <EditablePanel
                                 save={item => this.saveProject(item)}
                                 values={proj}
